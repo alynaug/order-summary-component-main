@@ -1,0 +1,159 @@
+:root {
+  --color-paleblue: hsl(225, 100%, 94%);
+  --color-brightblue: hsl(245, 75%, 52%);
+  --color-verypaleblue: hsl(225, 100%, 98%);
+  --color-desaturatedblue: hsl(224, 23%, 55%);
+  --color-darkblue: hsl(223, 47%, 23%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Red Hat Display", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 95% auto;
+  place-items: center;
+  background-image: url("../images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 150vw;
+  background-color: var(--color-paleblue);
+  height: 100vh;
+}
+
+/* Typography */
+
+h1,
+p {
+  margin: 0;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--color-darkblue);
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: var(--color-desaturatedblue);
+  font-weight: 500;
+}
+
+a {
+  color: var(color --color-brightblue);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+a:hover {
+  filter: opacity(70%);
+}
+
+.card {
+  width: 350px;
+  max-width: 90vw;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 15px hsla(245, 75%, 52%, 0.1);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 3rem;
+}
+
+.summary-header,
+.summary-description {
+  margin-bottom: 1.5rem;
+}
+
+.plan {
+  display: grid;
+  grid-template: 1fr / 1fr 2fr 1fr;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--color-verypaleblue);
+  margin-bottom: 2rem;
+}
+
+.musicIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.plan_info {
+  text-align: start;
+}
+
+.plan_info > p:first-child {
+  color: var(--color-darkblue);
+  font-weight: 900;
+}
+
+.btn {
+  border: none;
+  height: 40px;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.proceed {
+  background-color: var(--color-brightblue);
+  color: white;
+  margin-bottom: 1rem;
+  box-shadow: 0 15px 15px hsla(245, 75%, 52%, 0.2);
+}
+
+.proceed:hover {
+  filter: opacity(70%);
+}
+
+.cancel {
+  color: var(--color-darkblue);
+  filter: opacity(70%);
+  background: none;
+}
+
+.cancel:hover {
+  filter: opacity(100%);
+}
+
+.attribution {
+  font-size: 1.4rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 850px) {
+  body {
+    background-image: url("../images/pattern-background-desktop.svg");
+    background-size: 100vw;
+  }
+}
